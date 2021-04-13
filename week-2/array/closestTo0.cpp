@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
  
-void quickSort(int *, int, int);
- 
 void minAbsSumPair(int arr[], int n)
 {
          
@@ -12,7 +10,7 @@ void minAbsSumPair(int arr[], int n)
  
     int l = 0, r = n-1;
      
-    int min_l = l, min_r = n-1;
+    int min_l = 0, min_r = n-1;
      
 
      
@@ -21,8 +19,6 @@ void minAbsSumPair(int arr[], int n)
     while(l < r)
     {
         sum = arr[l] + arr[r];
-     
-
         if(abs(sum) < abs(min_sum))
         {
             min_sum = sum;
