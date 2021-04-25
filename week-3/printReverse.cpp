@@ -35,14 +35,12 @@ void printList() {
     }
 }
 
-void middle() {
-     node* slow = head;
-     node* fast = head;
-    while(fast!=NULL && fast->next !=NULL) {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    cout<<slow->data;
+void printReverse(node* head) {
+     if(head == NULL) {
+         return;
+     }
+     printReverse(head->next);
+     cout<<head->data<<" ";
 }
 
 int main() {
@@ -52,5 +50,5 @@ int main() {
     Insert(8);
     printList();
     cout<<endl;
-    middle();
+    printReverse(head);
 }

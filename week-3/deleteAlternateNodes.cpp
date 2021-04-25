@@ -25,24 +25,25 @@ void Insert(int data) {
 
 void printList() {
     node *temp = head;
-    if(head == NULL) {
-        cout<<"empty";
-        return;
-    }
     while(temp != NULL) {
         cout<<temp->data<<" ";
         temp=temp->next;
     }
 }
 
-void middle() {
-     node* slow = head;
-     node* fast = head;
-    while(fast!=NULL && fast->next !=NULL) {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    cout<<slow->data;
+void removeAlternate() {
+        node* curr = head;
+        node* del = head->next;
+
+        while(curr!=NULL && del!=NULL) {
+            curr->next = del->next;
+            free(del);
+            curr = curr->next;
+            if(curr!=NULL) {
+                del = curr->next;
+            }
+        }
+     
 }
 
 int main() {
@@ -50,7 +51,9 @@ int main() {
     Insert(4);
     Insert(6);
     Insert(8);
+    Insert(10);
     printList();
     cout<<endl;
-    middle();
+    removeAlternate();
+    printList();
 }
