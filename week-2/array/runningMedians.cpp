@@ -44,6 +44,7 @@ int main(){
     for(auto i=a.begin()+1; i<a.end(); i++){
         s = numbers.size();
         int c = getIndexToInsert(numbers,0,s,*i);
+        cout<<c<<endl;
         numbers.insert(numbers.begin()+c,*i);
         s++;
         if(s%2==1){

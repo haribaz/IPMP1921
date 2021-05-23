@@ -2,18 +2,10 @@
 using namespace std;
  
 void minAbsSumPair(int arr[], int n)
-{
-         
- 
+{  
     int sum, min_sum = INT_MAX;
-     
- 
     int l = 0, r = n-1;
-     
     int min_l = 0, min_r = n-1;
-     
-
-     
     sort(arr, arr+n);
      
     while(l < r)

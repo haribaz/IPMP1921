@@ -41,7 +41,6 @@ pair<node*, node*> alternatingSublists(node* head) {
           temp1 = temp1->next;
           temp2 = temp2->next;
       }
-          temp1->next = NULL;
       return {a, b};
 }
 

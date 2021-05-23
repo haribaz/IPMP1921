@@ -9,37 +9,23 @@
  * };
  */
 class Solution {
-public: 
-       
-    
-    
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        ListNode *temp = head;
-        int size = 0; 
-        while(temp!=NULL) {
-            size++;
-            temp=temp->next;
-        }
-        cout<<size<<endl;
-        ListNode* current=head;
-        ListNode* prev=NULL;
-        ListNode* aduthu=NULL;
-        int count = 0;
-        while(current != NULL && count < k) {
-        aduthu = current->next;
-        current->next = prev;
-        prev = current;
-        current = aduthu;
-        count++;
-    }
-    size = size - k;
-
-    if(aduthu != NULL && k<=size) {
-        head->next = reverseKGroup(aduthu, k);
-    } else {
-        head->next = aduthu;
-    }
-        return prev;
+public:
+    ListNode* swapPairs(ListNode* head) {
         
-}
+        int count = 0;
+        ListNode *curr = head;
+        ListNode *prev = NULL;
+        ListNode *next = NULL;
+        while(curr != NULL && count<2) {
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+        if(next != NULL) {
+            head->next = swapPairs(next);
+        }
+        return prev;
+    }
 };

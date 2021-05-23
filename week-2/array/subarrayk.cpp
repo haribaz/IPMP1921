@@ -16,7 +16,7 @@ pair<int, int> subarraySum(vector<int>& nums) {
 
 int main()
 {
-    vector<int> arr{-3, 2, 3, 1, 6};
+    vector<int> arr{-3, 2, -3, 1, 6};
     pair<int, int> p = subarraySum(arr);
     cout<<p.first<<" "<<p.second;
     
