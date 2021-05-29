@@ -36,7 +36,7 @@ int binarySearch(int arr[], int low, int high, int x)
 }
 int main()
 {
-    int arr[] = { 1, 2, 3, 3, 3, 3, 10 };
+    int arr[] = { 1, 2, 3, 3, 3, 4 };
     int n = sizeof(arr) / sizeof(arr[0]);
     int x = 3;
      
@@ -45,7 +45,7 @@ int main()
              << n / 2 << " times in arr[]"
              << endl;
     else
-        cout << x << " does not appear more than"
+        cout << x << " does not appear more than "
              << n / 2 << "  times in arr[]" << endl;
   
     return 0;
