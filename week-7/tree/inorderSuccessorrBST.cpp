@@ -13,7 +13,7 @@ node* helper(node* root, node* current) {
         node* successor = NULL;
         node* ancestor = root;
         while(ancestor != current) {
-            if(ancestor->data > current->daya) {
+            if(ancestor->data > current->data) {
                 successor = ancestor;
                 ancestor = ancestor->left;
             } else {

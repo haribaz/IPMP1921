@@ -4,6 +4,7 @@ using namespace std;
 void permutation(string s, int l, int r) {
     if(l==r) {
         cout<<s<<endl;
+        return;
     }
 
     for(int i=l; i<=r; i++) {
@@ -15,7 +16,7 @@ void permutation(string s, int l, int r) {
 }
 
 int main() {
-    string s = "abc";
+    string s = "abcd";
     int n = s.size();
     permutation(s, 0, n-1);
 }
